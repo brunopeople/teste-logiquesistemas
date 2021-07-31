@@ -16,6 +16,19 @@ class CORSMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        //Intercepts OPSTIONS requests
+        if($request->isMethod('OPTIONS')){
+            $response = \response('', 200);
+        }else{
+            $response = $next($request);
+        }
+
+            $response->header('Acess-Control-Allow-Origin', "*");
+            $response->header('Acess-Control-Allow-Methods', 'PUT, GET, POST,DELETE, OPTIONS, PATCH');
+            $response->header('Acess-Control-Allow-Headers',$request->header('Acess-Control-Request-Headers'));
+            $response->header('Acess-Control-Allow-Crendetials', 'true');
+            $response->header('Accept', 'application/json');
+            $response->header('Acess-Control-Expose-Headers','lcoation');
+            return $response;
     }
 }
