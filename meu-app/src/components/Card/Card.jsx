@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Card = styled.div`
     padding: 1vh;
-    width: 300px:
+    width: 300px;
     min-width: 300px;
     background: #97CAE5;
     border-radius: 4px;
@@ -18,22 +18,22 @@ const Card = styled.div`
         background: #fff;
     }
 
-    :hover {
+    :hover{
         transition: 0.4s;
         box-shadow: 2px 2px 4px #333;
     }
+
 `;
 
 const TitleCard = styled.div`
     font-size: 1.4em;
-    display: flex;
+    display:flex;
     justify-content: center;
     background: #fff;
     font-weight: bold;
     padding-bottom: 4vh;
 `;
-
-const Description = style.div`
+const Description = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@ const Description = style.div`
     padding-bottom: 4vh;
 `;
 
-export default props =>{
+export default props => {
     return (
         <Card color={props.color}>
             <i className={props.icon}></i>

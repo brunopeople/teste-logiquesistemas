@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
+/* Components general */
 import Burguer from './Burguer';
 
 const Menu = styled.div`
@@ -10,7 +11,7 @@ const Menu = styled.div`
     justify-content: space-around;
     padding: 1vh;
 
-    .link-voltar{
+    .link-home{
         text-decoration: none;
         font-weight: bold;
     }
@@ -22,30 +23,26 @@ const Menu = styled.div`
 `;
 
 export const Rows = styled.div`
-    border-bottom: 2px solid #45c94;
+    border-bottom: 2px solid #045c94;
 `;
+
 
 const Row = styled.div`
     display: flex;
     justify-content: center;
-    color: #45c94;
-    
+    color: #045c94;
     @media only screen and (max-width: 430px){
         font-size: 1.1em;
     }
-
-    @media only screen and (min-width: 431px) and (max-widht: 600px){
+    @media only screen and (min-width: 431px) and (max-width: 600px){
         font-size: 1.3em;
     }
-
-    @media only screen and(min-width: 601px) and (max-width: 999px){
+    @media only screen and (min-width: 601px) and (max-width: 999px){   
         font-size: 1.7em;
     }
-
     @media only screen and (min-width: 1000px){
         font-size: 1.7em;
     }
-
 `;
 
 const Line = styled.div`
@@ -60,7 +57,7 @@ export default props => {
             <Menu>
                 <Link to="/" className='link-home'>
                     <Rows>
-                        <Row>URL</Row>
+                        <Row>SEURL</Row>
                         <Row>Sistema Encurtador de URL</Row>
                     </Rows>
                 </Link>

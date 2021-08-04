@@ -6,7 +6,7 @@ const Container = styled.div`
     margin: 0 auto;
 `;
 
-export default props => {
+export default props =>{
     return(
         <Container>
             {props.children}

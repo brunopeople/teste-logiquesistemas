@@ -9,25 +9,29 @@ const Input = styled.input`
     margin-top: 1vh;
     padding: 2vh;
 
-   ::-webkit-input-placeholder {/* Edge */
 
+    ::-webkit-input-placeholder { /* Edge */
     color: rgba(0,0,0,0.4);
-}
 
-    :-ms-input-placeholder {/* Internet Explorer 10-11 */
-        color: rgba(0,0,0,0.4);
     }
 
-    ::placeholder{
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
         color: rgba(0,0,0,0.4);
+
     }
 
+    ::placeholder {
+        color: rgba(0,0,0,0.4);
+
+    }
+    
 `;
 
 export default props => {
     return (
         <React.Fragment>
-            <Input autoComplete="off" type={props.type} name={props.name} placeholder={props.placeholder} required />
+            <Input  autoComplete="off" type={props.type} name={props.name} placeholder={props.placeholder} required />
         </React.Fragment>
+
     )
 }

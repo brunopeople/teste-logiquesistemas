@@ -5,7 +5,7 @@ const ButtonForm = styled.button`
     cursor: pointer;
     background: transparent;
     padding: 2vh;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     border-radius: 4px;
     color: #89C64E;
     border: 3px solid #89C64E;
@@ -15,8 +15,9 @@ const ButtonForm = styled.button`
     :hover{
         transition: 0.4s;
         color: #fff;
-        background: #89C64E;
+        background: #89C64E
     }
+
 `;
 
 export default props =>{

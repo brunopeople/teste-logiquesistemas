@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+/* Components General */
 import CardLink from './CardLink';
 
-const CardsLink =styled.div`
+const CardsLink = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -11,10 +12,11 @@ const CardsLink =styled.div`
 `;
 
 export default props => {
-    return(
+    return (
         <CardsLink>
-            <CardLink url="/cadastro" icon="fas fa-hand-pointer" textButton="Realizar Cadastro" />
-            <CardLink url="/login" icon="fas fa-hand-pointer" textButto="Logar" />
+            <CardLink url="/cadastro" icon="fas fa-hand-pointer" textButton="Ok, vou me cadastrar!" />
+            <CardLink url="/login" icon="fas fa-hand-pointer" textButton="Quero fazer meu login." />
+
         </CardsLink>
     )
 }

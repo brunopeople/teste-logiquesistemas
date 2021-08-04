@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-/* Paginas do Pages */
-import HomePage from './pages/Home';
-import LoginPage from './pages/Login';
-import RegisterPage from './pages/Registro';
+/* Pages */
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
-/* Componentens vindos do componentsUser */
-import Shorten from './componentsUser/Encurtador/Encurtador';
-import List from './componentsUser/Lista/Lista';
-import LogadoPage from './pages/Logado';
-import DeslogadoPage from './pages/Deslogado';
+/* UserPageComponents */
+import Shorten from './componentsUser/Shorten/Shorten';
+import List from './componentsUser/List/List';
+import LogadoPage from './pages/LogadoPage';
+import DeslogadoPage from './pages/DeslogadoPage';
 
 function App() {
 
@@ -19,13 +19,13 @@ function App() {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/deslogado" exact component={LogoutPage} />
-          <Route path="/logado" exact component={Logado} />
-          <Route path="/" exact component={Home} />
-          <Route path="/login" exact component={Login} />
-          <Route path="/cadastro" exact component={Registro} />
-          <Route path="/user/shorten" exact component={Encurtador} />
-          <Route path="/user/list/:id" exact component={Lista} />
+          <Route path="/deslogado" exact component={DeslogadoPage} />
+          <Route path="/logado" exact component={LogadoPage} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/login" exact component={LoginPage} />
+          <Route path="/cadastro" exact component={RegisterPage} />
+          <Route path="/user/shorten" exact component={Shorten} />
+          <Route path="/user/list/:id" exact component={List} />
         </Switch>
       </ BrowserRouter>
     )
@@ -33,11 +33,11 @@ function App() {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/deslogado" exact component={LogoutPage} />
-          <Route path="/logado" exact component={Logado} />
-          <Route path="/" exact component={Home} />
-          <Route path="/login" exact component={Login />
-          <Route path="/cadastro" exact component={Registro} />
+          <Route path="/deslogado" exact component={DeslogadoPage} />
+          <Route path="/logado" exact component={LogadoPage} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/login" exact component={LoginPage} />
+          <Route path="/cadastro" exact component={RegisterPage} />
         </Switch>
       </ BrowserRouter>
     )

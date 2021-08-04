@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import UI from './UI';
+import Ul from './Ul';
 
 const StyledBurguer = styled.div`
     width: 2rem;
@@ -13,7 +13,7 @@ const StyledBurguer = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
     cursor: pointer;
-    z-index: 20,
+    z-index: 20;
     display: none;
 
     @media(max-width: 769px){
@@ -23,37 +23,37 @@ const StyledBurguer = styled.div`
     div{
         width: 2rem;
         height: 0.25rem;
-        background: ${({ open }) => ? '#ccc' : '#333'};
+        background: ${({ open }) => open ? '#ccc' : '#333'};
         border-radius: 10px;
         transform-origin: 1px;
         transition: all 0.3s linear;
 
-        &nth-child(1){
-            transform: ${({open}) => open ? 'rotate(-45deg)' : 'rotate(0)'}
+        &:nth-child(1){
+            transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'}
         }
-
         &:nth-child(2){
-            transform: ${({open}) => open ? 'translateX(100%)' : 'translateX(0)'};
-            oapcity: ${({ open }) => open ? 0 : 1};
+            transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
+            opacity: ${({ open }) => open ? 0 : 1};
         }
-
         &:nth-child(3){
             transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'}
         }
+        
     }
 `;
 
 const Burguer = () => {
+
     const [open, setOpen] = useState(false);
 
-    return(
+    return (
         <React.Fragment>
             <StyledBurguer open={open} onClick={() => setOpen(!open)}>
                 <div />
                 <div />
                 <div />
             </StyledBurguer>
-            <UI open={open} />
+            <Ul open={open} />
         </React.Fragment>
     )
 }
