@@ -30,7 +30,7 @@ em seguida rode o comando
 npm start
 Que rodará a aplicação do front-end.
 
-* Rodando o Backend
- Ao baixar a aplicação, vá para a pasta do diretório e rode o comando no promp do Node.js
- 
- * node src/index.js
+**Rodando o Backend
+ *Ao baixar a aplicação, vá para a pasta do diretório e rode o comando no promp do Node.js
+  
+  node src/index.js
